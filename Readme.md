@@ -1,1 +1,2 @@
-# INT334 
+# INT334 : Enterprise Application Automation
+
