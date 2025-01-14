@@ -41,3 +41,20 @@ AT2 : Project (12th Week) (Allocation in 4th Week)
 * Introduction to splunk
 * Installation to splunk
 * Services in splunk
+
+## Splunk 
+
+1. Data Analysis
+2. Data Analytics
+3. Monitoring 
+4. Visualization
+5. Compliance Management
+6. Security
+
+## Features of K8s 
+
+1. High Availability
+2. Auto Scaling and de-scaling
+3. Fault Tolerance 
+4. Multiple Cluster
+5. Security
