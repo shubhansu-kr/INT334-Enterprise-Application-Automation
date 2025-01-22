@@ -46,27 +46,27 @@ Type	        Protocol	Port range	Source
 All traffic	    All	        All	        Anywhere-IPv4
 
 Step-8:	Click ` Create security group` below the page & save.
-![alt text](image.png)
-![alt text](image-1.png)
-![alt text](image-2.png)
+![alt text](images/image.png)
+![alt text](images/image-1.png)
+![alt text](images/image-2.png)
 
 ## Create EC2 Instance
 
 Step-9:	Go to the AWS Console, EC2 Service and click on `Launch instance`.
-Step-10:	Name of the instance as `kube-master` and choose `Ubuntu Server 20.04 LTS (HVM), SSD Volume Type` as Amazon Machine Image (AMI).
+Step-10:	Name of the instance as `kube-master` and choose `Ubuntu Server 20.04 LTS (HVM), SSD Volume Type` as Amazon Machine images/image (AMI).
 Step-11:	Choose ` t2.medium` as Instance type.
 Step-12:	Create key pair.
 Step-13:	On Network settings choose Select existing security group and select `K8-Master-SG`. Finally click on `launch instance`.
 
 Step-14:	Repeat the steps (Step-9 to Step-13) above to create the slave instance. Keep the same configuration and just name it `kube-slave` and choose the `K8-Slave-SG` security group.
 
-![alt text](image-3.png)
-![alt text](image-4.png)
+![alt text](images/image-3.png)
+![alt text](images/image-4.png)
 
 ## Working with Master Instance
 
 1. Select the master EC2 instance and click on connect. This will secure us a connection to the ec2 instance via ssh
-2. ![alt text](image-5.png)
+2. ![alt text](images/image-5.png)
 3. Run the following commands one by one in remote desk to setup the instance (Master) :
    1. `sudo hostnamectl set-hostname master`
    2. `sudo su`
@@ -87,7 +87,7 @@ Step-14:	Repeat the steps (Step-9 to Step-13) above to create the slave instance
    11. `sudo sed -i '/swap/d' /etc/fstab`
    12. `sudo mount -a`
    13. `free -h`
-   14. `sudo kubeadm config images pull`
+   14. `sudo kubeadm config images/images pull`
 6. Check for Docker status and kubernetes status
    1. `sudo systemctl status docker`
    2. `sudo systemctl status kubelet`
@@ -109,7 +109,7 @@ Step-14:	Repeat the steps (Step-9 to Step-13) above to create the slave instance
     2. `kubectl create -f https://raw.githubusercontent.com/projectcalico/calico/v3.25.0/manifests/custom-resources.yaml`
     3. `kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml`
     4. `curl -I https://raw.githubusercontent.com/projectcalico/calico/v3.25.0/manifests/tigera-operator.yaml`
-11. ![alt text](image-6.png)
+11. ![alt text](images/image-6.png)
 
 ## Working with slave instance
 
@@ -148,6 +148,7 @@ Step-14:	Repeat the steps (Step-9 to Step-13) above to create the slave instance
 14. Check Node Status (from the master node):
     1.  After joining the worker node, you can check the status from the master node:
     2.  `kubectl get nodes`
-    3.  ![alt text](image-7.png)
+    3.  ![alt text](images/image-7.png)
     4.  In master's instance - restart the kubectl if connection is refused
         1.  `sudo systemctl restart kubelet`
+        2.  `ps aux | grep kube-apiserver`
