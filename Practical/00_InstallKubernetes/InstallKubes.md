@@ -87,7 +87,7 @@ Step-14:	Repeat the steps (Step-9 to Step-13) above to create the slave instance
    11. `sudo sed -i '/swap/d' /etc/fstab`
    12. `sudo mount -a`
    13. `free -h`
-   14. `sudo kubeadm config images/images pull`
+   14. `sudo kubeadm config images pull`
 6. Check for Docker status and kubernetes status
    1. `sudo systemctl status docker`
    2. `sudo systemctl status kubelet`
