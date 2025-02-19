@@ -16,13 +16,9 @@ else
     exit 1
 fi
 
-# Switch to root
-sudo su
-
 # Update system
 log "Updating system..."
 sudo apt-get update && sudo apt-get upgrade -y
-sudo reboot -f
 
 # Disable swap
 log "Disabling swap..."
@@ -122,3 +118,11 @@ fi
 # chmod +x setup_k8s.sh
 # ./setup_k8s.sh worker
 # Copy the join command from the master node and run it manually on the worker node.
+
+# Or you can use wget/curl command to pull the script from the GitHub repository and execute it directly.
+# wget -O setup_k8s.sh https://raw.githubusercontent.com/shubhansu-kr/INT334-Enterprise-Application-Automation/master/Script/SetupMasterSlave.sh
+# or, curl -o setup_k8s.sh https://raw.githubusercontent.com/shubhansu-kr/INT334-Enterprise-Application-Automation/master/Script/SetupMasterSlave.sh
+
+# sed -i 's/\r$//' setup_k8s.sh
+# chmod +x setup_k8s.sh
+# ./setup_k8s.sh master or ./setup_k8s.sh worker
