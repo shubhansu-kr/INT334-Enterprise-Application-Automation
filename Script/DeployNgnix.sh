@@ -5,6 +5,15 @@ log() {
     echo -e "\n\n[INFO] $1\n"
 }
 
+# Cleanup option
+if [ "$1" == "cleanup" ]; then
+    log "Deleting the Nginx deployment..."
+    kubectl delete deployment nginx-deployment
+    log "Cleanup complete!"
+
+    exit 0
+fi
+
 # Define YAML file name and URL
 YAML_FILE="nginx-deployment.yaml"
 YAML_URL="https://raw.githubusercontent.com/kubernetes/website/main/content/en/examples/controllers/nginx-deployment.yaml"
