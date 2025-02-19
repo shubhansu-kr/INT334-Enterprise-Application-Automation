@@ -68,3 +68,7 @@ template:
         ports:
         - containerPort: 80
 ```
+
+Link : 
+
+https://raw.githubusercontent.com/kubernetes/website/main/content/en/examples/controllers/nginx-deployment.yaml
