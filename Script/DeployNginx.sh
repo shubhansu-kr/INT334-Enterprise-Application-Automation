@@ -66,8 +66,8 @@ fi
 
 
 # You can use wget/curl command to pull the script from the GitHub repository and execute it directly.
-# wget -O deploy_nginx.sh https://raw.githubusercontent.com/shubhansu-kr/INT334-Enterprise-Application-Automation/master/Script/DeployNgnix.sh
-# or, curl -o deploy_nginx.sh https://raw.githubusercontent.com/shubhansu-kr/INT334-Enterprise-Application-Automation/master/Script/DeployNgnix.sh
+# wget -O deploy_nginx.sh https://raw.githubusercontent.com/shubhansu-kr/INT334-Enterprise-Application-Automation/master/Script/DeployNginx.sh
+# or, curl -o deploy_nginx.sh https://raw.githubusercontent.com/shubhansu-kr/INT334-Enterprise-Application-Automation/master/Script/DeployNginx.sh
 
 
 # chmod +x deploy_nginx.sh
