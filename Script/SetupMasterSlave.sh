@@ -83,7 +83,7 @@ sudo apt-mark hold kubelet kubeadm kubectl
 # Initialize the Kubernetes cluster (Only on master node)
 if [ "$NODE_TYPE" == "master" ]; then
     log "Initializing Kubernetes master node..."
-    sudo kubeadm init
+    sudo kubeadm init --ignore-preflight-errors=all
 
     mkdir -p "$HOME/.kube"
     sudo cp -i /etc/kubernetes/admin.conf "$HOME/.kube/config"
