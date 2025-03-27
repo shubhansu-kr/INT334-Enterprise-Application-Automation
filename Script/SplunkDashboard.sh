@@ -5,6 +5,10 @@ log() {
     echo "[LOG] $(date +'%Y-%m-%d %H:%M:%S') - $1"
 }
 
+# Stop Splunk service if running
+log "Stopping Splunk service if already running..."
+sudo /opt/splunk/bin/splunk stop
+
 # Update and upgrade system packages
 log "Updating and upgrading system packages..."
 sudo apt update && sudo apt upgrade -y
@@ -34,13 +38,13 @@ log "Setting permissions for Splunk configuration file..."
 sudo chown -R splunk:splunk /opt/splunk/etc/system/local/user-seed.conf
 sudo chmod 600 /opt/splunk/etc/system/local/user-seed.conf
 
-# Restart Splunk to apply changes
-log "Restarting Splunk service..."
-sudo /opt/splunk/bin/splunk restart
+# Restart Splunk to apply changes and auto-accept license
+log "Restarting Splunk service with license agreement..."
+sudo /opt/splunk/bin/splunk restart --accept-license
 
-# Fetch EC2 instance public IP
-log "Fetching EC2 instance public IP..."
-PUBLIC_IP=$(curl -s http://169.254.169.254/latest/meta-data/public-ipv4)
+# Fetch public IP using an external service
+log "Fetching public IP..."
+PUBLIC_IP=$(curl -s https://checkip.amazonaws.com)
 
 # Display Splunk dashboard URL
 log "Splunk Dashboard URL: http://$PUBLIC_IP:8000"
