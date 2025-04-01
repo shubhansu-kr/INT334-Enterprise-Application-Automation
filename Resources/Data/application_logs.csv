@@ -1,0 +1,101 @@
+timestamp,level,service,message,user_id,ip_address
+2025-04-01 07:21:25,ERROR,UserService,Invalid password attempt,1272,10.0.0.1
+2025-04-01 07:20:25,DEBUG,PaymentService,Inventory updated,1396,192.168.1.3
+2025-04-01 07:19:25,WARNING,PaymentService,Invalid password attempt,1285,192.168.1.3
+2025-04-01 07:18:25,INFO,PaymentService,Payment processed successfully,1275,10.0.0.1
+2025-04-01 07:17:25,ERROR,PaymentService,Invalid password attempt,1162,192.168.1.1
+2025-04-01 07:16:25,INFO,AuthService,Invalid password attempt,1565,192.168.1.1
+2025-04-01 07:15:25,INFO,PaymentService,User not found,1797,192.168.1.3
+2025-04-01 07:14:25,DEBUG,InventoryService,Database connection failed,1573,192.168.1.3
+2025-04-01 07:13:25,INFO,PaymentService,User not found,1783,10.0.0.2
+2025-04-01 07:12:25,ERROR,PaymentService,Order placed successfully,1017,10.0.0.2
+2025-04-01 07:11:25,ERROR,AuthService,Invalid password attempt,1801,192.168.1.3
+2025-04-01 07:10:25,ERROR,AuthService,Session timeout,1003,192.168.1.3
+2025-04-01 07:09:25,DEBUG,PaymentService,Payment processed successfully,1347,192.168.1.3
+2025-04-01 07:08:25,WARNING,UserService,Payment processed successfully,1048,192.168.1.2
+2025-04-01 07:07:25,WARNING,AuthService,Payment processed successfully,1482,10.0.0.2
+2025-04-01 07:06:25,ERROR,AuthService,Payment processed successfully,1976,192.168.1.1
+2025-04-01 07:05:25,WARNING,AuthService,Database connection failed,1311,192.168.1.1
+2025-04-01 07:04:25,INFO,InventoryService,User login successful,1012,192.168.1.3
+2025-04-01 07:03:25,ERROR,InventoryService,Payment processed successfully,1001,192.168.1.3
+2025-04-01 07:02:25,ERROR,InventoryService,Database connection failed,1928,10.0.0.1
+2025-04-01 07:01:25,DEBUG,AuthService,Invalid password attempt,1413,192.168.1.3
+2025-04-01 07:00:25,WARNING,InventoryService,Order placed successfully,1302,192.168.1.1
+2025-04-01 06:59:25,ERROR,InventoryService,User login successful,1979,10.0.0.2
+2025-04-01 06:58:25,ERROR,InventoryService,Invalid password attempt,1403,192.168.1.1
+2025-04-01 06:57:25,ERROR,AuthService,User not found,1215,10.0.0.1
+2025-04-01 06:56:25,WARNING,PaymentService,Session timeout,1636,192.168.1.1
+2025-04-01 06:55:25,INFO,UserService,Session timeout,1646,192.168.1.2
+2025-04-01 06:54:25,INFO,PaymentService,Session timeout,1569,192.168.1.1
+2025-04-01 06:53:25,DEBUG,UserService,Order placed successfully,1733,192.168.1.2
+2025-04-01 06:52:25,ERROR,PaymentService,User not found,1859,192.168.1.2
+2025-04-01 06:51:25,INFO,AuthService,User login successful,1683,192.168.1.1
+2025-04-01 06:50:25,DEBUG,UserService,User login successful,1774,192.168.1.2
+2025-04-01 06:49:25,INFO,PaymentService,Inventory updated,1799,192.168.1.1
+2025-04-01 06:48:25,WARNING,AuthService,Order placed successfully,1016,10.0.0.1
+2025-04-01 06:47:25,WARNING,PaymentService,User not found,1477,192.168.1.1
+2025-04-01 06:46:25,ERROR,InventoryService,Inventory updated,1556,10.0.0.2
+2025-04-01 06:45:25,DEBUG,PaymentService,Invalid password attempt,1041,10.0.0.2
+2025-04-01 06:44:25,WARNING,UserService,Inventory updated,1163,192.168.1.3
+2025-04-01 06:43:25,WARNING,AuthService,Database connection failed,1360,192.168.1.3
+2025-04-01 06:42:25,ERROR,InventoryService,Database connection failed,1317,192.168.1.1
+2025-04-01 06:41:25,DEBUG,UserService,Database connection failed,1324,10.0.0.1
+2025-04-01 06:40:25,ERROR,PaymentService,Invalid password attempt,1710,192.168.1.1
+2025-04-01 06:39:25,INFO,UserService,User login successful,1810,192.168.1.1
+2025-04-01 06:38:25,DEBUG,AuthService,Order placed successfully,1513,192.168.1.3
+2025-04-01 06:37:25,INFO,PaymentService,Order placed successfully,1712,192.168.1.2
+2025-04-01 06:36:25,DEBUG,InventoryService,User login successful,1355,10.0.0.2
+2025-04-01 06:35:25,INFO,UserService,User login successful,1786,192.168.1.1
+2025-04-01 06:34:25,INFO,AuthService,Order placed successfully,1287,10.0.0.1
+2025-04-01 06:33:25,WARNING,UserService,Session timeout,1102,10.0.0.2
+2025-04-01 06:32:25,ERROR,PaymentService,User not found,1417,192.168.1.1
+2025-04-01 06:31:25,ERROR,AuthService,User login successful,1267,192.168.1.3
+2025-04-01 06:30:25,DEBUG,AuthService,Payment processed successfully,1400,192.168.1.2
+2025-04-01 06:29:25,ERROR,AuthService,Invalid password attempt,1946,10.0.0.2
+2025-04-01 06:28:25,INFO,InventoryService,Database connection failed,1054,10.0.0.2
+2025-04-01 06:27:25,DEBUG,UserService,Session timeout,1412,10.0.0.2
+2025-04-01 06:26:25,INFO,InventoryService,Invalid password attempt,1139,192.168.1.3
+2025-04-01 06:25:25,INFO,PaymentService,User not found,1943,192.168.1.2
+2025-04-01 06:24:25,INFO,AuthService,Payment processed successfully,1636,192.168.1.1
+2025-04-01 06:23:25,DEBUG,InventoryService,User not found,1494,192.168.1.3
+2025-04-01 06:22:25,DEBUG,PaymentService,Database connection failed,1381,192.168.1.1
+2025-04-01 06:21:25,INFO,AuthService,User not found,1379,10.0.0.1
+2025-04-01 06:20:25,INFO,InventoryService,Inventory updated,1040,10.0.0.2
+2025-04-01 06:19:25,ERROR,PaymentService,Inventory updated,1675,192.168.1.1
+2025-04-01 06:18:25,DEBUG,UserService,Order placed successfully,1519,192.168.1.2
+2025-04-01 06:17:25,WARNING,InventoryService,Inventory updated,1852,192.168.1.1
+2025-04-01 06:16:25,ERROR,UserService,Payment processed successfully,1561,192.168.1.3
+2025-04-01 06:15:25,ERROR,InventoryService,Invalid password attempt,1318,10.0.0.2
+2025-04-01 06:14:25,DEBUG,PaymentService,Invalid password attempt,1297,192.168.1.3
+2025-04-01 06:13:25,ERROR,InventoryService,Order placed successfully,1142,10.0.0.2
+2025-04-01 06:12:25,WARNING,PaymentService,Order placed successfully,1396,10.0.0.1
+2025-04-01 06:11:25,DEBUG,UserService,Database connection failed,1420,192.168.1.2
+2025-04-01 06:10:25,DEBUG,InventoryService,Invalid password attempt,1936,192.168.1.2
+2025-04-01 06:09:25,WARNING,PaymentService,Order placed successfully,1428,10.0.0.1
+2025-04-01 06:08:25,WARNING,AuthService,Invalid password attempt,1456,192.168.1.1
+2025-04-01 06:07:25,ERROR,InventoryService,User login successful,1447,10.0.0.2
+2025-04-01 06:06:25,INFO,PaymentService,User login successful,1091,10.0.0.1
+2025-04-01 06:05:25,DEBUG,InventoryService,Invalid password attempt,1628,192.168.1.2
+2025-04-01 06:04:25,DEBUG,UserService,Invalid password attempt,1631,192.168.1.3
+2025-04-01 06:03:25,INFO,AuthService,Inventory updated,1862,10.0.0.1
+2025-04-01 06:02:25,WARNING,AuthService,User login successful,1393,10.0.0.1
+2025-04-01 06:01:25,ERROR,InventoryService,User login successful,1750,10.0.0.1
+2025-04-01 06:00:25,DEBUG,PaymentService,Order placed successfully,1287,192.168.1.1
+2025-04-01 05:59:25,WARNING,UserService,Database connection failed,1260,192.168.1.3
+2025-04-01 05:58:25,DEBUG,InventoryService,Invalid password attempt,1418,10.0.0.1
+2025-04-01 05:57:25,ERROR,PaymentService,Inventory updated,1755,192.168.1.1
+2025-04-01 05:56:25,ERROR,UserService,Inventory updated,1760,10.0.0.2
+2025-04-01 05:55:25,DEBUG,InventoryService,Inventory updated,1300,192.168.1.3
+2025-04-01 05:54:25,WARNING,AuthService,User login successful,1836,192.168.1.3
+2025-04-01 05:53:25,WARNING,AuthService,User login successful,1434,10.0.0.1
+2025-04-01 05:52:25,INFO,InventoryService,Invalid password attempt,1982,10.0.0.2
+2025-04-01 05:51:25,ERROR,InventoryService,Order placed successfully,1436,10.0.0.2
+2025-04-01 05:50:25,WARNING,AuthService,Payment processed successfully,1211,192.168.1.1
+2025-04-01 05:49:25,ERROR,PaymentService,User not found,1550,192.168.1.3
+2025-04-01 05:48:25,DEBUG,InventoryService,Database connection failed,1802,10.0.0.1
+2025-04-01 05:47:25,INFO,PaymentService,Inventory updated,1534,10.0.0.2
+2025-04-01 05:46:25,ERROR,AuthService,User not found,1870,192.168.1.3
+2025-04-01 05:45:25,ERROR,InventoryService,Order placed successfully,1398,192.168.1.1
+2025-04-01 05:44:25,ERROR,InventoryService,Inventory updated,1892,192.168.1.1
+2025-04-01 05:43:25,WARNING,AuthService,Invalid password attempt,1262,10.0.0.2
+2025-04-01 05:42:25,DEBUG,PaymentService,Payment processed successfully,1384,192.168.1.2
