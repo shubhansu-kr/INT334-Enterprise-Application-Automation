@@ -24,3 +24,28 @@ Step 1 : Start Searching
 3. Save as New Dashboard
 4. Fill the details for the dashboard.
 5. View Dashboard.
+
+Error Log Query
+
+```query
+source="large_application_logs.csv" host="52.54.217.182" index="summary" sourcetype="csv"
+| search level="ERROR"
+| table timestamp level service message user_id ip_address
+| sort -timestamp
+```
+
+Count log by occurence level
+
+```query
+source="large_application_logs.csv" host="52.54.217.182" index="summary" sourcetype="csv"
+| stats count by level
+```
+
+Find logs for specific user
+
+```query
+source="large_application_logs.csv" host="52.54.217.182" index="summary" sourcetype="csv"
+| search user_id=1500
+| table timestamp level service message ip_address
+| sort -timestamp
+```
