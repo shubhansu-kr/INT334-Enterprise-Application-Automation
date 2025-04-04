@@ -14,7 +14,7 @@ YELLOW="\e[33m"
 RED="\e[31m"
 RESET="\e[0m"
 
-# Custom logging function
+# Custom logging functions
 log() {
     echo -e "${BLUE}[INFO]${RESET} $1"
 }
@@ -44,8 +44,8 @@ echo ""
 
 # Download HTML files
 log "Downloading HTML files from GitHub..."
-curl -o site1/index.html $SITE1_HTML
-curl -o site2/index.html $SITE2_HTML
+curl -s -o site1/index.html "$SITE1_HTML"
+curl -s -o site2/index.html "$SITE2_HTML"
 success "HTML files downloaded successfully!"
 echo ""
 
@@ -58,11 +58,12 @@ echo ""
 
 # Download and apply Kubernetes deployment files
 log "Downloading Kubernetes deployment YAML files..."
-curl -o site1-deployment.yaml $SITE1_YAML
-curl -o site2-deployment.yaml $SITE2_YAML
+curl -s -o site1-deployment.yaml "$SITE1_YAML"
+curl -s -o site2-deployment.yaml "$SITE2_YAML"
 success "YAML files downloaded successfully!"
 echo ""
 
+# Apply deployments
 log "Applying deployments to Kubernetes..."
 kubectl apply -f site1-deployment.yaml
 kubectl apply -f site2-deployment.yaml
@@ -70,19 +71,29 @@ success "Deployments applied successfully!"
 echo ""
 
 # Wait for pods to be ready
-log "Waiting for Site1 pod to be ready..."
-kubectl wait --for=condition=ready pod -l app=site1 --timeout=60s
-success "Site1 pod is ready!"
+log "Ensuring Site1 pod is running..."
+until kubectl get pods -l app=site1 --field-selector=status.phase=Running &> /dev/null; do
+    sleep 2
+    echo -n "."
+done
+success "Site1 pod is running!"
 echo ""
 
-log "Waiting for Site2 pod to be ready..."
-kubectl wait --for=condition=ready pod -l app=site2 --timeout=60s
-success "Site2 pod is ready!"
+log "Ensuring Site2 pod is running..."
+until kubectl get pods -l app=site2 --field-selector=status.phase=Running &> /dev/null; do
+    sleep 2
+    echo -n "."
+done
+success "Site2 pod is running!"
 echo ""
 
 # Fetch public IP
 log "Fetching public IP..."
 PUBLIC_IP=$(curl -s https://checkip.amazonaws.com)
+if [ -z "$PUBLIC_IP" ]; then
+    error "Failed to fetch public IP!"
+    exit 1
+fi
 success "Public IP detected: $PUBLIC_IP"
 echo ""
 
@@ -104,3 +115,7 @@ echo ""
 
 # chmod +x deploy_static_webpage.sh
 # ./deploy_static_webpage.sh
+
+# Tip
+# curl -o deploy_static_webpage.sh https://raw.githubusercontent.com/shubhansu-kr/INT334-Enterprise-Application-Automation/master/Script/DeployStaticWebsite.sh && chmod +x deploy_static_webpage.sh && ./deploy_static_webpage.sh
+# curl -s https://raw.githubusercontent.com/shubhansu-kr/INT334-Enterprise-Application-Automation/master/Script/DeployStaticWebsite.sh | bash

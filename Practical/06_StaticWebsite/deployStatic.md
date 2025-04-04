@@ -1,32 +1,47 @@
+# Deploy two different static websites
+
+Setup a master - slave node cluster on AWS using the script [SetupMasterSlave](./../../Script/SetupMasterSlave.sh)
+
+Run the following commands to setup the directory and files.
+
+```sh
 mkdir site1
 mkdir site2
+```
 
-nano site1/index.html
+`nano site1/index.html`
+
+```html
 <!DOCTYPE html>
 <html>
 <head><title>Site1</title></head>
 <body>
-<h1>Hello Guys this is site1 - Sachin</h1>
+<h1>Hello Guys this is site1 - shubhansu-kr</h1>
 </body>
 </html>
+```
 
+`nano site2/index.html`
 
-nano site2/index.html
+```html
 <!DOCTYPE html>
 <html>
 <head><title>Site2</title></head>
 <body>
-<h1>Hello Guys this is site2 - Sachin</h1>
+<h1>Hello Guys this is site2 - shubhansu-kr</h1>
 </body>
 </html>
+```
 
-
+```bash
 kubectl create configmap site1-html --from-file=index.html=./site1/index.html
 
 kubectl create configmap site2-html --from-file=index.html=./site2/index.html
+```
 
-nano site1-deployment.yaml
+`nano site1-deployment.yaml`
 
+```yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -64,10 +79,11 @@ spec:
     - port: 80
       targetPort: 80
       nodePort: 30001
+```
 
+`nano site2-deployment.yaml`
 
-nano site2-deployment.yaml
-
+```yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -105,17 +121,16 @@ spec:
     - port: 80
       targetPort: 80
       nodePort: 30002
+```
 
-
+```bash
 kubectl apply -f site1-deployment.yaml
 kubectl apply -f site2-deployment.yaml
 kubectl get pods
 kubectl get svc
 kubectl get nodes -o wide
+```
 
 =>Browser:-
-	Site1: “http://<Node-IP>:30001”
-	Site2: “http://<Node-IP>:30002”
- 
-
-
+ Site1: “<http://Node-IP:30001”>
+ Site2: “<http://Node-IP:30002”>
