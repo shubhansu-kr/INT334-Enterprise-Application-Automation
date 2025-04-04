@@ -74,3 +74,11 @@ fi
 # ./deploy_nginx.sh
 
 # ./deploy_nginx.sh cleanup
+
+# Tip - Execute
+# curl -o deploy_nginx.sh https://raw.githubusercontent.com/shubhansu-kr/INT334-Enterprise-Application-Automation/master/Script/DeployNginx.sh && chmod +x deploy_nginx.sh && ./deploy_nginx.sh
+# curl -s https://raw.githubusercontent.com/shubhansu-kr/INT334-Enterprise-Application-Automation/master/Script/DeployNginx.sh | bash
+
+# Tip - Cleanup
+# curl -o deploy_nginx.sh https://raw.githubusercontent.com/shubhansu-kr/INT334-Enterprise-Application-Automation/master/Script/DeployNginx.sh && chmod +x deploy_nginx.sh && ./deploy_nginx.sh cleanup
+# curl -s https://raw.githubusercontent.com/shubhansu-kr/INT334-Enterprise-Application-Automation/master/Script/DeployNginx.sh | bash

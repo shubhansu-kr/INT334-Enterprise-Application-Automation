@@ -126,3 +126,11 @@ fi
 # sed -i 's/\r$//' setup_k8s.sh
 # chmod +x setup_k8s.sh
 # ./setup_k8s.sh master or ./setup_k8s.sh worker
+
+# Tip
+# curl -o setup_k8s.sh https://raw.githubusercontent.com/shubhansu-kr/INT334-Enterprise-Application-Automation/master/Script/SetupMasterSlave.sh && sed -i 's/\r$//' setup_k8s.sh && chmod +x setup_k8s.sh
+# ./setup_k8s.sh master  # For Master Node
+# ./setup_k8s.sh worker  # For Worker Node
+
+# curl -s https://raw.githubusercontent.com/shubhansu-kr/INT334-Enterprise-Application-Automation/master/Script/SetupMasterSlave.sh | bash -s master
+# curl -s https://raw.githubusercontent.com/shubhansu-kr/INT334-Enterprise-Application-Automation/master/Script/SetupMasterSlave.sh | bash -s worker

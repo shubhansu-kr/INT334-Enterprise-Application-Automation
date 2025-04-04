@@ -75,3 +75,8 @@ log "Nginx deployment setup complete!"
 # ./service_deploy.sh
 
 # ./service_deploy.sh cleanup
+
+# Tip 
+# curl -o service_deploy.sh https://raw.githubusercontent.com/shubhansu-kr/INT334-Enterprise-Application-Automation/master/Script/ServiceDeployment.sh && chmod +x service_deploy.sh && ./service_deploy.sh
+# curl -s https://raw.githubusercontent.com/shubhansu-kr/INT334-Enterprise-Application-Automation/master/Script/ServiceDeployment.sh | bash
+

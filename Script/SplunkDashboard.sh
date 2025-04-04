@@ -55,3 +55,7 @@ log "Splunk Dashboard URL: http://$PUBLIC_IP:8000"
 
 # chmod +x splunk_dashboard.sh
 # ./splunk_dashboard.sh
+
+# Tip 
+# curl -o splunk_dashboard.sh https://raw.githubusercontent.com/shubhansu-kr/INT334-Enterprise-Application-Automation/master/Script/SplunkDashboard.sh && chmod +x splunk_dashboard.sh && ./splunk_dashboard.sh
+# curl -s https://raw.githubusercontent.com/shubhansu-kr/INT334-Enterprise-Application-Automation/master/Script/SplunkDashboard.sh | bash
