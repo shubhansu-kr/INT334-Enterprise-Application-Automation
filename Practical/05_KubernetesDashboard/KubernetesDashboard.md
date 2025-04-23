@@ -20,3 +20,19 @@ kubectl get nodes
 kubectl get pods
 
 kubectl create clusterrolebinding admin-user-binding     --clusterrole=cluster-admin     --serviceaccount=kubernetes-dashboard:admin-user
+
+---
+
+Custom deployment
+
+kubectl apply -f https://raw.githubusercontent.com/shubhansu-kr/INT334-Enterprise-Application-Automation/refs/heads/master/Static/yaml/kubernetes/dashboard.yaml
+
+kubectl get svc kubernetes-dashboard -n kubernetes-dashboard 
+kubectl create serviceaccount admin-user -n kubernetes-dashboard
+kubectl get serviceaccount -n kubernetes-dashboard
+kubectl -n kubernetes-dashboard create token admin-user
+
+kubectl get nodes
+kubectl get pods
+
+kubectl create clusterrolebinding admin-user-binding     --clusterrole=cluster-admin     --serviceaccount=kubernetes-dashboard:admin-user
