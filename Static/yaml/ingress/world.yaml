@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: world-app
+  labels:
+    app: world-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: world-app
+  template:
+    metadata:
+      labels:
+        app: world-app
+    spec:
+      containers:
+        - name: world-app
+          image: hashicorp/http-echo
+          args: ["-text=World"]
+          ports:
+            - containerPort: 5678
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: world-service
+  labels:
+    app: world-app
+spec:
+  selector:
+    app: world-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 5678
+  type: ClusterIP
